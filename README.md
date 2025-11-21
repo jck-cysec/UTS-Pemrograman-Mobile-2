@@ -99,35 +99,6 @@ dependencies:
 
 ---
 
-## 🛠️ Cara Menjalankan Proyek
-
-**Prerequisites**
-Flutter SDK (v3.13.0 atau terbaru)
-IDE: Visual Studio Code atau Android Studio
-
-**Langkah-langkah**
-
-1. **Clone Repository:**
-
-```bash
-git clone [URL_REPOSITORY_ANDA]
-cd [NAMA_FOLDER_PROYEK]
-```
-
-2. **Install Dependencies:**
-
-```bash
-flutter pub get
-```
-
-3. **Jalankan Aplikasi:**
-
-```bash
-flutter run
-```
-
----
-
 ## 📄 Lisensi
 
 Proyek ini dilisensikan di bawah
@@ -136,11 +107,4 @@ Proyek ini dilisensikan di bawah
 
 ## 🤝 Kontribusi
 
-Kami sangat menerima pull request dan laporan bug. Silakan buka issue atau kirimkan pull request untuk kontribusi.
-
-Terima kasih telah melihat proyek ini!
-
----
-
-> Jangan lupa mengganti semua placeholder yang ada di dalam tanda kurung siku `[]`!
-> Jangan lupa juga ganti badge license dan URL repository agar sesuai proyek Anda.
+Thank you very much sudah melihat project UTS ini
