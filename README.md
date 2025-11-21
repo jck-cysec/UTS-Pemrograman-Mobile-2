@@ -1,1 +1,146 @@
-# UTS-Pemrograman-Mobile-2
+# 🍽️ Aplikasi Pemesanan Dinamis (Flutter/Dart)
+
+<p align="center">
+<img src="https://img.shields.io/badge/State%20Management-Cubit%20(Bloc)-informational?style=for-the-badge&logo=dart" alt="Cubit Badge"/>
+<img src="https://img.shields.io/badge/Flutter%20Version-3.13.0-blue?style=for-the-badge&logo=flutter" alt="Flutter Version Badge"/>
+<img src="https://img.shields.io/github/license/USERNAME/REPO?style=for-the-badge" alt="License Badge"/>
+</p>
+
+Aplikasi ini adalah simulasi sistem pemesanan modern yang dibangun menggunakan **Flutter** dan **Dart**. Proyek ini menekankan pada pengelolaan state yang efisien, pemisahan tanggung jawab yang jelas, dan implementasi UI yang fleksibel untuk menangani logika bisnis yang kompleks, terutama dalam perhitungan diskon dinamis.
+
+---
+
+## 📝 Informasi Mahasiswa
+
+| Detail    | Keterangan                   |
+| :-------- | :--------------------------- |
+| **Nama**  | Haidir Mirza Ahmad Zacky          |
+| **NIM**   | 23552011072 |
+| **Kelas** | TIF RP 23 CNS B            |
+
+---
+
+## 🚀 Fitur Utama & Keunggulan Arsitektur
+
+### 1. State Management dengan Cubit untuk Logika Diskon Dinamis (10 Poin)
+
+Kami menggunakan **Cubit** (dari paket `flutter_bloc`) untuk mengelola status transaksi. Pendekatan ini sangat membantu pengelolaan transaksi dengan logika diskon dinamis melalui:
+
+* **Sentralisasi State:** Semua data pesanan (item, jumlah, diskon) disimpan dalam satu state yang mudah dikelola (`OrderState` dalam `order_cubit.dart`).
+* **Reactive Updates:** Setiap perubahan pesanan (tambah/kurang item, update *quantity*) otomatis **menghitung ulang total** dan **diskon** yang berlaku.
+* **Separation of Concerns:** Logika bisnis perhitungan diskon terpisah sepenuhnya dari UI, membuat kode lebih **maintainable** dan **bersih**.
+* **Predictable State Changes:** Setiap aksi (`addToOrder`, `removeFromOrder`) menghasilkan state baru yang *immutable*, meminimalkan *bug* dan memudahkan *debugging*.
+* **Easy Testing:** Logika bisnis dapat di-*test* secara independen tanpa *User Interface*.
+
+### 2. Perbedaan Diskon Per Item vs Diskon Total Transaksi (10 Poin)
+
+Implementasi arsitektur ini dirancang untuk dapat mengakomodasi dua jenis skema diskon yang berbeda:
+
+#### Diskon Per Item:
+
+* Diterapkan pada **harga masing-masing produk** sebelum dijumlahkan ke total.
+* **Contoh:** Nasi Goreng Rp20.000 diskon 20% = Rp16.000.
+* **Dihitung:** `harga_final = harga_asli * (1 - diskon_item)`.
+
+#### Diskon Total Transaksi:
+
+* Diterapkan pada **keseluruhan nilai belanja** setelah semua item dijumlahkan.
+* **Contoh:** Total Rp150.000 dapat diskon 10% menjadi Rp135.000.
+* **Dihitung** setelah semua item dijumlahkan.
+
+### 3. Manfaat Widget Stack pada Tampilan Kategori Menu (10 Poin)
+
+Penggunaan **Widget Stack** memberikan manfaat desain yang signifikan:
+
+* **Layering:** Dapat menumpuk elemen UI (misalnya *badge* "Promo" di atas gambar kategori) untuk efek visual yang kompleks.
+* **Positioning Fleksibel:** Menggunakan `Positioned` *widget* untuk menempatkan elemen di lokasi spesifik.
+* **Visual Appeal:** Membuat tampilan lebih menarik dengan *overlay effects*.
+* **Space Efficient:** Memanfaatkan ruang layar dengan optimal.
+
+---
+
+## 📂 Struktur Proyek yang Lengkap
+
+Proyek ini mengadopsi struktur arsitektur yang bersih, modular, dan didorong oleh pola **BLoC/Cubit**.
+
+```
+lib
+├── blocs                 # State Management Logic (BLoC/Cubit)
+│   └── order_cubit.dart  # Kelas Cubit: Logika bisnis diskon dan kalkulasi total.
+│   └── order_state.dart  # Kelas State: Representasi status pesanan saat ini (immutable).
+├── models                # Data Structures (Immutable Data Objects)
+│   └── menu_model.dart   # Model data item menu.
+│   └── order_item.dart   # Model untuk item dalam pesanan (quantity, subtotal).
+├── pages                 # Full Screen Views/Containers
+│   ├── order_home_page.dart   # Tampilan utama daftar menu.
+│   ├── order_stack_page.dart  # Halaman dengan implementasi Stack (misalnya, kategori).
+│   └── order_summary_page.dart # Halaman ringkasan akhir pesanan.
+├── widgets               # Reusable UI Components
+│   └── menu_card.dart        # Komponen untuk menampilkan item menu.
+│   └── total_summary_box.dart # Widget reaktif ringkasan total.
+└── main.dart             # Entry Point Aplikasi
+```
+
+---
+
+## ⚙️ Dependencies Utama
+
+Proyek ini menggunakan paket-paket berikut untuk arsitektur dan fungsionalitas:
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  # State Management
+  flutter_bloc: ^8.1.3
+  equatable: ^2.0.5
+  # Tambahkan dependensi lain yang Anda gunakan di sini
+```
+
+---
+
+## 🛠️ Cara Menjalankan Proyek
+
+**Prerequisites**
+Flutter SDK (v3.13.0 atau terbaru)
+IDE: Visual Studio Code atau Android Studio
+
+**Langkah-langkah**
+
+1. **Clone Repository:**
+
+```bash
+git clone [URL_REPOSITORY_ANDA]
+cd [NAMA_FOLDER_PROYEK]
+```
+
+2. **Install Dependencies:**
+
+```bash
+flutter pub get
+```
+
+3. **Jalankan Aplikasi:**
+
+```bash
+flutter run
+```
+
+---
+
+## 📄 Lisensi
+
+Proyek ini dilisensikan di bawah
+
+---
+
+## 🤝 Kontribusi
+
+Kami sangat menerima pull request dan laporan bug. Silakan buka issue atau kirimkan pull request untuk kontribusi.
+
+Terima kasih telah melihat proyek ini!
+
+---
+
+> Jangan lupa mengganti semua placeholder yang ada di dalam tanda kurung siku `[]`!
+> Jangan lupa juga ganti badge license dan URL repository agar sesuai proyek Anda.
