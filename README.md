@@ -78,30 +78,6 @@ lib
 └── main.dart             # Entry Point Aplikasi
 ```
 
----
-
-## ⚙️ Dependencies Utama
-
-Proyek ini menggunakan paket-paket berikut untuk arsitektur dan fungsionalitas:
-
-```yaml
-dependencies:
-  flutter:
-    sdk: flutter
-  # State Management
-  flutter_bloc: ^8.1.3
-  equatable: ^2.0.5
-  # Tambahkan dependensi lain yang Anda gunakan di sini
-```
-
----
-
-## 📄 Lisensi
-
-Proyek ini dilisensikan di bawah
-
----
-
 ## 🤝 Kontribusi
 
 Thank you very much sudah melihat project UTS ini
