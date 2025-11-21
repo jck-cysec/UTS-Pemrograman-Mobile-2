@@ -6,7 +6,7 @@
 <img src="https://img.shields.io/github/license/USERNAME/REPO?style=for-the-badge" alt="License Badge"/>
 </p>
 
-Aplikasi ini adalah simulasi sistem pemesanan modern yang dibangun menggunakan **Flutter** dan **Dart**. Proyek ini menekankan pada pengelolaan state yang efisien, pemisahan tanggung jawab yang jelas, dan implementasi UI yang fleksibel untuk menangani logika bisnis yang kompleks, terutama dalam perhitungan diskon dinamis.
+Aplikasi ini adalah sebuah aplikasi Flutter sederhana untuk sistem pemesanan makanan/minuman, yang di dalamnya terdapat fitur menampilkan daftar menu, memilih kategori, menambahkan pesanan, serta melihat ringkasan order. Struktur project mencakup model MenuModel untuk data menu, state management menggunakan OrderCubit, halaman-halaman seperti Home, Category Stack, dan Order Summary, serta widget khusus seperti MenuCard untuk menampilkan item menu. Aplikasi ini dirancang sebagai demonstrasi alur pemesanan modern yang rapi dan modular, cocok untuk tugas UTS atau proyek pembelajaran Flutter.
 
 ---
 
