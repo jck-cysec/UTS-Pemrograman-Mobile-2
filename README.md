@@ -1,4 +1,4 @@
-# 🍽️ Aplikasi Pemesanan Dinamis (Flutter/Dart)
+# 🍽️ Aplikasi UTS (Flutter/Dart)
 
 <p align="center">
 <img src="https://img.shields.io/badge/State%20Management-Cubit%20(Bloc)-informational?style=for-the-badge&logo=dart" alt="Cubit Badge"/>
