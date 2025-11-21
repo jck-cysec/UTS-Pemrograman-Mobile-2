@@ -67,17 +67,14 @@ Proyek ini mengadopsi struktur arsitektur yang bersih, modular, dan didorong ole
 lib
 ├── blocs                 # State Management Logic (BLoC/Cubit)
 │   └── order_cubit.dart  # Kelas Cubit: Logika bisnis diskon dan kalkulasi total.
-│   └── order_state.dart  # Kelas State: Representasi status pesanan saat ini (immutable).
 ├── models                # Data Structures (Immutable Data Objects)
 │   └── menu_model.dart   # Model data item menu.
-│   └── order_item.dart   # Model untuk item dalam pesanan (quantity, subtotal).
 ├── pages                 # Full Screen Views/Containers
 │   ├── order_home_page.dart   # Tampilan utama daftar menu.
 │   ├── order_stack_page.dart  # Halaman dengan implementasi Stack (misalnya, kategori).
 │   └── order_summary_page.dart # Halaman ringkasan akhir pesanan.
 ├── widgets               # Reusable UI Components
 │   └── menu_card.dart        # Komponen untuk menampilkan item menu.
-│   └── total_summary_box.dart # Widget reaktif ringkasan total.
 └── main.dart             # Entry Point Aplikasi
 ```
 
